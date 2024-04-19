@@ -1,11 +1,11 @@
 import { object, string } from "zod"
  
 export const signInSchema = object({
-  email: string({ required_error: "Email is required" })
-    .min(1, "Email is required")
-    .email("Invalid email"),
-  password: string({ required_error: "Password is required" })
-    .min(1, "Password is required")
-    .min(8, "Password must be more than 8 characters")
-    .max(32, "Password must be less than 32 characters"),
+  email: string({ required_error: "El Email es requerido" })
+    .min(1, "El Email es requerido")
+    .email("Email invalido"),
+  password: string({ required_error: "la Contraseña es requerida" })
+    .min(1, "la Contraseña es requerida")
+    .min(8, "El Password debe tener al menos 8 caracteres")
+    .max(32, "el Password debe tener menos de 32 caracteres"),
 })
